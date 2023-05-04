@@ -6,11 +6,26 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
 </head>
 <body>
-  <div id="box" style="width: 100px; height: 100px; background-color: blue;"></div>
+  <div id="box1" style="width: 100px; height: 100px; background-color: blue;"></div>
+
+  <div id="box2" style="width: 100px; height: 100px; background-color: red;"></div>
+
+  <div id="box3" style="width: 100px; height: 100px; background-color: black;"></div>
   
   <script>
     // animate the box element
-    gsap.to("#box", {duration: 2, x: 200, ease: "power2.inOut"});
+    
+    gsap.to("#box1", {duration: 2, x: 200, ease: "power2.inOut"});
+
+    gsap.fromTo( "#box2",{ x: -40, fill: 'red', }, { x: 40, fill: 'green' });
+
+    gsap.to("#box3", { 
+        duration: 2,
+        x: 200,
+        rotation: 360,
+    });
+
+
   </script>
 </body>
 </html>
